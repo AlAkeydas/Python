@@ -105,6 +105,46 @@
         "documentation": {}
     },
     {
+        "label": "include",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "include",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "include",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
         "label": "get_wsgi_application",
         "importPath": "django.core.wsgi",
         "description": "django.core.wsgi",
@@ -255,6 +295,22 @@
         "importPath": "sys",
         "description": "sys",
         "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "HttpResponse",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
+        "label": "HttpResponse",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
         "documentation": {}
     },
     {
@@ -465,6 +521,51 @@
         "documentation": {}
     },
     {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "DJANGO.my_page.horoscope.urls",
+        "description": "DJANGO.my_page.horoscope.urls",
+        "peekOfCode": "urlpatterns = [\n   path('leo/', views.leo),\n   path('scorpio/', views.scorpio),\n]",
+        "detail": "DJANGO.my_page.horoscope.urls",
+        "documentation": {}
+    },
+    {
+        "label": "leo",
+        "kind": 2,
+        "importPath": "DJANGO.my_page.horoscope.views",
+        "description": "DJANGO.my_page.horoscope.views",
+        "peekOfCode": "def leo(request,):\n    return HttpResponse(\"Знак зодиака Лев\")\ndef scorpio(request,):\n    return HttpResponse(\"Знак зодиака Скорпион\")\ndef aries(request,):\n    return HttpResponse(\"Знак зодиака Овен\")\ndef taurus(request,):\n    return HttpResponse(\"Знак зодиака Телец\")",
+        "detail": "DJANGO.my_page.horoscope.views",
+        "documentation": {}
+    },
+    {
+        "label": "scorpio",
+        "kind": 2,
+        "importPath": "DJANGO.my_page.horoscope.views",
+        "description": "DJANGO.my_page.horoscope.views",
+        "peekOfCode": "def scorpio(request,):\n    return HttpResponse(\"Знак зодиака Скорпион\")\ndef aries(request,):\n    return HttpResponse(\"Знак зодиака Овен\")\ndef taurus(request,):\n    return HttpResponse(\"Знак зодиака Телец\")",
+        "detail": "DJANGO.my_page.horoscope.views",
+        "documentation": {}
+    },
+    {
+        "label": "aries",
+        "kind": 2,
+        "importPath": "DJANGO.my_page.horoscope.views",
+        "description": "DJANGO.my_page.horoscope.views",
+        "peekOfCode": "def aries(request,):\n    return HttpResponse(\"Знак зодиака Овен\")\ndef taurus(request,):\n    return HttpResponse(\"Знак зодиака Телец\")",
+        "detail": "DJANGO.my_page.horoscope.views",
+        "documentation": {}
+    },
+    {
+        "label": "taurus",
+        "kind": 2,
+        "importPath": "DJANGO.my_page.horoscope.views",
+        "description": "DJANGO.my_page.horoscope.views",
+        "peekOfCode": "def taurus(request,):\n    return HttpResponse(\"Знак зодиака Телец\")",
+        "detail": "DJANGO.my_page.horoscope.views",
+        "documentation": {}
+    },
+    {
         "label": "application",
         "kind": 5,
         "importPath": "DJANGO.my_page.my_page.asgi",
@@ -622,7 +723,7 @@
         "kind": 5,
         "importPath": "DJANGO.my_page.my_page.urls",
         "description": "DJANGO.my_page.my_page.urls",
-        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n]",
+        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('horoscope/', include('horoscope.urls')),\n    path('todo_week/', include('week_days.urls')),\n]",
         "detail": "DJANGO.my_page.my_page.urls",
         "documentation": {}
     },
@@ -642,6 +743,33 @@
         "description": "DJANGO.my_page.week_days.apps",
         "peekOfCode": "class WeekDaysConfig(AppConfig):\n    name = 'week_days'",
         "detail": "DJANGO.my_page.week_days.apps",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "DJANGO.my_page.week_days.urls",
+        "description": "DJANGO.my_page.week_days.urls",
+        "peekOfCode": "urlpatterns = [\n   path('monday/', views.monday),\n   path('tuesday/', views.tuesday),\n]",
+        "detail": "DJANGO.my_page.week_days.urls",
+        "documentation": {}
+    },
+    {
+        "label": "monda",
+        "kind": 2,
+        "importPath": "DJANGO.my_page.week_days.views",
+        "description": "DJANGO.my_page.week_days.views",
+        "peekOfCode": "def monday (request,):\n    return HttpResponse('1. Бегит <br>2. Анжианя')\ndef tuesday (request,):\n    return HttpResponse('1. Прес качат <br>2. Бегит')",
+        "detail": "DJANGO.my_page.week_days.views",
+        "documentation": {}
+    },
+    {
+        "label": "tuesda",
+        "kind": 2,
+        "importPath": "DJANGO.my_page.week_days.views",
+        "description": "DJANGO.my_page.week_days.views",
+        "peekOfCode": "def tuesday (request,):\n    return HttpResponse('1. Прес качат <br>2. Бегит')",
+        "detail": "DJANGO.my_page.week_days.views",
         "documentation": {}
     },
     {
